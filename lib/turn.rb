@@ -2,14 +2,15 @@ def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip()
   index = input_to_index(input)
-  while valid_move?(board,index) == false
-    puts "Please enter 1-9:"
-    input = gets.strip()
-  end
   if valid_move?(board,index)
     move(board, index)
     display_board(board)
-  end
+  else
+    while valid_move?(board,index) == false
+      puts "Please enter 1-9:"
+      input = gets.strip()
+    end
+  end  
 end
 
 # code your #valid_move? method here
