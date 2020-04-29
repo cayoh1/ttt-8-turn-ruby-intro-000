@@ -9,8 +9,10 @@ def turn(board)
     while valid_move?(board,index) == false
       puts "Please enter 1-9:"
       input = gets.strip()
+      if valid_move?(board,index)
+        break
     end
-  end  
+  end
 end
 
 # code your #valid_move? method here
