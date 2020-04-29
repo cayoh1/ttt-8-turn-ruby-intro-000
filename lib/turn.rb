@@ -1,10 +1,14 @@
-def turn
-puts "Where would you like to go?"
-input = gets.strip()
-index = input_to_index(input)
-move(board, index)
-display_board(board)
-
+def turn(board)
+  puts "Where would you like to go?"
+  input = gets.strip()
+  index = input_to_index(input)
+  while valid_move?(board,index) == false
+    puts "Where would you like to go?"
+    input = gets.strip()
+  if valid_move?(board,index)
+    move(board, index)
+    display_board(board)
+  end  
 end
 
 # code your #valid_move? method here
