@@ -5,6 +5,7 @@ def turn(board)
   while valid_move?(board,index) == false
     puts "Where would you like to go?"
     input = gets.strip()
+  end
   if valid_move?(board,index)
     move(board, index)
     display_board(board)
